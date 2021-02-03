@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Python Lambda Monorepo - Example
+Resources:
+  lambda1:
+    FunctionName: lambda1
+    Description: First Lambda
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.8
+      Handler: handler.handler
+      CodeUri: lambda1
+      Timeout: 20
+      Environment:
+        Variables:
+          PYTHONPATH: ./lib
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /lambda1
+            Method: any
+  lambda2:
+    FunctionName: lambda2
+    Description: Second Lambda
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.8
+      Handler: handler.handler
+      CodeUri: lambda2
+      Timeout: 20
+      Environment:
+        Variables:
+          PYTHONPATH: ./lib
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /lambda2
+            Method: any

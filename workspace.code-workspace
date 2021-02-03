@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.pythonPath": ".venv/bin/python",
+		"pythonTestExplorer.testFramework": "pytest",
+		"files.exclude": {
+			"**/__pycache__": true,
+			"**/.pytest_cache": true
+		},
+		"python.analysis.extraPaths": [
+			"./common/lib"
+		],
+		"python.formatting.provider": "black",
+		"editor.formatOnSave": true,
+		"search.exclude": {
+			"**/.aws-sam": true,
+			"**/.venv": true
+		},
+		"python.testing.pytestEnabled": true,
+		"python.autoComplete.extraPaths": [
+			"./common/lib"
+		],
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
+	},
+	"extensions": {
+		"recommendations": [
+			"littlefoxteam.vscode-python-test-adapter"
+		]
+	}
+}

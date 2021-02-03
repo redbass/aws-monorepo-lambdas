@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "multirepo-lambda"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-vbdmq301nttl"
+s3_prefix = "multirepo-lambda"
+region = "us-east-2"
+profile = "personal"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
